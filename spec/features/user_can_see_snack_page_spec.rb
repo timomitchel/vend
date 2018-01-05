@@ -18,5 +18,12 @@ describe "a user can visit a vending machine page and see associated snacks and 
     expect(page).to have_content ("Don's Mixed Drinks")
     expect(page).to have_content ("Kate's Mixed Drinks")
     expect(page).to have_content ("Tim's Mixed Drinks")
+    expect(page).to have_content (dons.average_snack_price)
+    expect(page).to have_content (kate.average_snack_price)
+    expect(page).to have_content (tim.average_snack_price)
+    expect(page).to have_content (dons.count_snacks)
+    expect(page).to have_content (kate.count_snacks)
+    expect(page).to have_content (tim.count_snacks)
+    save_and_open_page
   end
 end
